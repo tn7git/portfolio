@@ -10,12 +10,12 @@ import avatar from "../assets/avatar.jpg";
   const url = getCurrentURL();
   const { host, hostname, href, origin, pathname, port, protocol } =
     window.location;
-  if (pathname.replace(/\//, "") == "portfolio") {
+  if (pathname.replace(/\//g, "") == "portfolio") {
     document.getElementById("home_btn").style.display = "none";
   } else {
     document.getElementById("home_btn").style.display = "block";
   }
-  console.log(pathname.replace(/\//, ""));
+  console.log(pathname.replace(/\//g, ""));
 </script>
 
 <!-- Header -->
@@ -34,7 +34,7 @@ import avatar from "../assets/avatar.jpg";
   <div id="home_btn" style="padding-top: 20px; padding-right: 0;">
     <a href="/portfolio">
       Back
-      <i class="icon fas fa-home" style="color: #FAF7F9;"></i>
+      <i class="fas fa-home" style="color: #FAF7F9;"></i>
     </a>
   </div>
 </header>
